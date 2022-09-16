@@ -1,0 +1,149 @@
+.pageProduct {
+    width: 134.6rem;
+    margin: 8.2rem 4.9rem;
+    display: grid;
+    grid-template-areas: 
+    "A A"
+    "B C"
+    "D C"
+    ;
+    gap: 2.2rem;
+}
+
+/*--------------------------------*/
+
+.descriptionProduct{
+    grid-area: A;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 3.2rem;
+    padding: 4rem 2.9rem 3.4rem 5.6rem;
+}
+
+.descriptionImgs{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.imgPrincipal{
+
+    width: 609px;
+    height: 349px;
+    border-radius: 8px;
+}
+
+.imgSecond img{
+    width: 107px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.imgSecond{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.infoProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textProduct{
+    display: flex;
+    flex-direction: column;
+}
+
+.textProductName{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 6.2rem;
+}
+
+.infoProduct h2{
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 3.4rem;
+}
+
+.tableInfo{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 59.4rem;
+}
+
+.infoTable{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    width: 274px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoTable ul li{
+    
+    margin-bottom: 1.5rem;
+}
+
+/*----------------------------*/
+
+.AbautProduct{
+    grid-area: B;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 3.8rem 3rem;
+}
+
+.AbautProduct h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 20px;
+    margin-bottom: 1rem;
+}
+
+.AbautProduct p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+
+
+
+/*----------------------------*/
+
+.pricProduct{
+    grid-area: C ;
+   
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+/*---------------------------*/
+.comments{
+    grid-area: D;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}

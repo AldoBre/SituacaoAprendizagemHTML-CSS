@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+.page{
+    width: 100% ;
+}
+/*Header*/
+
+header {
+    width: 100%;
+    height: 9rem;
+    background-color: #D78E39;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logoHeader img {
+    width: 24rem;
+    height: 5.9rem;
+    border-radius: .8rem;
+}
+
+.searchHeader {
+    display: flex;
+}
+
+.searchHeader input {
+    background: rgba(238, 227, 227, 0.9);
+    width: 55.8rem;
+    height: 4.4rem;
+    border: none;
+    padding: 1rem;
+    border-bottom-left-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+}
+
+.searchHeader button {
+    background: rgba(238, 227, 227, 0.9);
+    height: 4.4rem;
+    border: none;
+    padding-right: 2.1rem;
+    border-top-right-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+    cursor: pointer;
+}
+
+
+
+.loginRegister, .loginRegister ul {
+    display: flex;
+    align-items: center;
+}
+
+.loginRegister {
+    gap: .9rem;
+}
+
+.loginRegister ul {
+    gap: .4rem;
+}
+
+.loginRegister ul li {
+    list-style: none;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #FFFFFF;
+    gap: 1rem;
+}
+
+.loginRegister ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Main */
+
+main {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        " A A"
+        " B C"
+    ;
+    gap: 3rem;
+    padding: 1.8rem 8.4rem;
+    justify-content: center;
+
+}
+
+.banners {
+    width: 100%;
+    height: 29.6rem;
+    grid-area: A;
+}
+
+article {
+    grid-area: B;
+    width: 32.5rem;
+    border: 1px solid #ccc;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    padding: 1rem;
+    border-radius: .8rem;
+}
+
+.catgories {
+    width: 100%;
+    height: 5.5rem;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .8rem;
+}
+
+.catgories a {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-decoration: none;
+    color: black;
+
+}
+
+.catgories:hover {
+    background-color: rgb(194, 128, 54);
+    transition: 400ms;
+}
+
+section {
+    grid-area: C;
+    width: 89.9rem;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "A B C"
+        "D E F"
+    ;
+    border: 1px solid #ccc;
+    border-radius: .8rem;
+    justify-content: center;
+    align-items: center;
+    padding: 6.9rem 3.9rem;
+    column-gap: 7.1rem;
+    row-gap: 3.9rem;
+}
+
+.cardItem {
+    width: 23.3rem;
+    height: 35rem;
+    background-color: #E6E6E6;
+    border-radius: .8rem;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardImg {
+    width: 20.6rem;
+    height: 15.5rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.cardImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: .8rem;
+}
+
+.cardButton {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cardItemButtonMore {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.cardItem p:nth-child(2) {
+    width: 20.6rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 1.1rem;
+}
+
+.cardItem p:nth-child(3) {
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 2.6rem;
+    font-family: 'DM Sans';
+    opacity: 80%;
+}
+
+.cardItem p:nth-child(4) {
+    color: #201CE2;
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+    font-family: 'Inter';
+    margin-bottom: 1.2rem;
+}
+
+.cardItemButtonAdd{
+    display: flex;
+    justify-content: center;
+}
+
+.cardItemButtonAdd button {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-size: 1.1rem;
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+    padding: .6rem;
+    color: #F5F5F5;
+    background-color: #3FAD0C;
+    border: none;
+    border-radius: .8rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.cardItemButtonAdd button img {
+    width: 1.9rem;
+    height: 1.9rem;
+}
+
+
+.cardItemButtonMore{
+    display: flex;
+    align-items: flex-end;
+}
+.cardItemButtonMore button {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 9px;
+    line-height: 11px;
+    background-color: #3FAD0C;
+    border: none;
+    border-radius: .8rem;
+    padding: .3rem .8rem;
+    width: 7.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.cardItemButtonMore button a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Footer*/
+
+footer {
+    width: 100%;
+    height: 18rem;
+    background: rgba(215, 142, 57, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 4rem 3.8rem;
+}
+
+.footerInfo {
+    text-align: center;
+    opacity: 80%;
+    line-height: 1.5rem;
+}
+
+.footerImg img {
+    width: 244px;
+    height: 59px;
+    border-radius: 8px;
+}
+
+.footerSocial {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.footerSocialInsta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.footerSocialFace {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}

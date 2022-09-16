@@ -1,0 +1,47 @@
+.cadastroSucess {
+    width: 47.5rem;
+    height: 35.8rem;
+    border: 1px solid #00000057;
+    border-radius: .8rem;
+    margin: 9rem auto;
+    padding: 6.5rem 4.4rem 7.8rem;
+}
+
+.cadastroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cadastroText p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 2.3rem;
+}
+
+.cadastroText p:nth-child(1) {
+    margin-bottom: 2.4rem;
+}
+
+.cadastroText button {
+    margin-top: 4.8rem;
+    width: 16.2rem;
+    height: 5.78rem;
+    border: none;
+    border-radius: .8rem;
+    text-transform: uppercase;
+    background-color: #D78E39;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    cursor: pointer;
+}
+
+.cadastroText button a{
+    text-decoration: none;
+    color: #F5F5F5 ;
+}
