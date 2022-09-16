@@ -8,6 +8,7 @@
     "D C"
     ;
     gap: 2.2rem;
+    font-family: 'Inter';
 }
 
 /*--------------------------------*/
@@ -139,6 +140,46 @@
    
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 8px;
+    padding: 2.5rem 6.2rem 2.2rem 6.3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.priceHeader, .price{
+    display: flex;
+    flex-direction: column;
+}
+
+.priceAfter2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-decoration-line: line-through;
+    margin-bottom: .5rem;
+}
+
+.priceNow2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 20px;
+    color: #201CE2;
+}
+
+.priceParc{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 1rem;
+}
+
+.priceParc span{
+    color: #201CE2;
 }
 
 /*---------------------------*/
