@@ -1,18 +1,18 @@
 .pageProduct {
     width: 134.6rem;
-    margin: 8.2rem 4.9rem;
+    margin: 8.2rem auto;
     display: grid;
-    grid-template-areas: 
-    "A A"
-    "B C"
-    "D C"
+    grid-template-areas:
+        "A A"
+        "B C"
+        "D C"
     ;
     gap: 2.2rem;
 }
 
 /*--------------------------------*/
 
-.descriptionProduct{
+.descriptionProduct {
     grid-area: A;
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -23,43 +23,43 @@
     padding: 4rem 2.9rem 3.4rem 5.6rem;
 }
 
-.descriptionImgs{
+.descriptionImgs {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.imgPrincipal{
+.imgPrincipal {
 
     width: 609px;
     height: 349px;
     border-radius: 8px;
 }
 
-.imgSecond img{
+.imgSecond img {
     width: 107px;
     height: 100px;
     border-radius: 8px;
 }
 
-.imgSecond{
+.imgSecond {
     display: flex;
     gap: 1.5rem;
 }
 
-.infoProduct{
+.infoProduct {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.textProduct{
+.textProduct {
     display: flex;
     flex-direction: column;
 }
 
-.textProductName{
+.textProductName {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -69,7 +69,7 @@
     margin-bottom: 6.2rem;
 }
 
-.infoProduct h2{
+.infoProduct h2 {
     text-align: center;
     font-family: 'Inter';
     font-style: normal;
@@ -79,14 +79,14 @@
     margin-bottom: 3.4rem;
 }
 
-.tableInfo{
+.tableInfo {
     display: flex;
     justify-content: center;
     gap: 1rem;
     width: 59.4rem;
 }
 
-.infoTable{
+.infoTable {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -98,21 +98,21 @@
     justify-content: center;
 }
 
-.infoTable ul li{
-    
+.infoTable ul li {
+
     margin-bottom: 1.5rem;
 }
 
 /*----------------------------*/
 
-.AbautProduct{
+.AbautProduct {
     grid-area: B;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     padding: 3.8rem 3rem;
 }
 
-.AbautProduct h2{
+.AbautProduct h2 {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -121,7 +121,7 @@
     margin-bottom: 1rem;
 }
 
-.AbautProduct p{
+.AbautProduct p {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -134,16 +134,203 @@
 
 /*----------------------------*/
 
-.pricProduct{
-    grid-area: C ;
-   
+.pricProduct {
+    grid-area: C;
+    width: 44.6rem;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 8rem 2.2rem 6.3rem;
+}
+
+.priceAfter2 {
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-decoration-line: line-through;
+    margin-bottom: .8rem;
+    display: flex;
+    gap: 15rem;
+}
+
+.priceNow2 {
+    color: #201CE2;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 20px;
+    font-family: 'Inter';
+    margin-bottom: 1rem;
+}
+
+.priceParc {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 1.7rem;
+}
+
+.inventory {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 1rem;
+}
+
+.priceParc span {
+    color: #201CE2;
+}
+
+.inventoryQuant {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    font-family: 'Inter';
+}
+
+.textInventory {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectQuant {
+    display: flex;
+    width: 1.8rem;
+    height: 2.3rem;
+    background-color: #D9D9D9;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.textInventoryUnid {
+    display: flex;
+    align-items: flex-end;
+}
+
+.priceButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .9rem;
+}
+
+.priceButton button {
+    width: 24.6rem;
+    height: 4.89rem;
+    border: none;
+    border-radius: .8rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 20px;
+    background-color: #3FAD0C;
+    cursor: pointer;
+}
+
+.priceHeader {
+    margin-bottom: 2rem;
+}
+
+.addCart button {
+    background-color: #63A344;
+    margin-bottom: 1.8rem;
+}
+
+.shippingPrice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: 3.3rem;
+}
+
+.shippingPrice img {
+    width: 3.4rem;
+    height: 2.5rem;
+}
+
+.shippingPrice span {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    color: #201CE2;
+}
+
+.infoBuy {
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.textInfoBuy {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.textInfoBuy img:nth-child(1) {
+    width: 3.1rem;
+    height: 3.1rem;
+}
+
+.textInfoBuy span {
+    color: #201CE2;
 }
 
 /*---------------------------*/
-.comments{
+.comments {
     grid-area: D;
+    font-family: 'Inter';
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem 4rem 1.6rem;
+    gap: 1.6rem;
+}
+
+.commentsCard {
+    display: flex;
+    gap: 4.5rem;
+}
+
+.comments h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    
+}
+
+.textComent {
+    font-style: normal;
+    font-size: 12px;
+    line-height: 15px;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
 }
