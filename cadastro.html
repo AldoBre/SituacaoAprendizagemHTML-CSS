@@ -43,7 +43,7 @@
         </header>
 
 
-        <form action="">
+        <form action="cadastro_concluido.html">
 
             <fieldset>
 
@@ -57,7 +57,7 @@
 
                     <div class="inputWrapper">
                         <label for="name">Nome Completo</label>
-                        <input type="text" id="inputName">
+                        <input type="text" min='11' required id="inputName">
                     </div>
 
                     <div class="inputsWrapper">
@@ -66,17 +66,17 @@
 
                             <div class="inputWrapperData">
                                 <label for="cpf">cpf</label>
-                                <input type="number" id="inputCpf">
+                                <input type="number" required min="11111111111" id="inputCpf" >
                             </div>
 
                             <div class="inputWrapperData">
                                 <label for="dataNasc">Data Nascimento</label>
-                                <input type="date" id="inputDataNasc">
+                                <input type="date" id="inputDataNasc" required>
                             </div>
 
                             <div class="inputWrapperData">
                                 <label for="password">Senha</label>
-                                <input type="password" id="inputPass">
+                                <input type="password" id="inputPass" required>
                             </div>
 
                         </div>
@@ -86,21 +86,21 @@
 
                             <div class="inputWrapperData">
                                 <label for="tel">Telefone</label>
-                                <input type="number" id="inputTel">
+                                <input type="tel" min="11111111111" id="inputTel" required>
                             </div>
 
 
 
                             <div class="inputWrapperData">
                                 <label for="email">E-mail</label>
-                                <input type="email" id="inputEmail">
+                                <input type="email" id="inputEmail" required>
                             </div>
 
 
 
                             <div class="inputWrapperData">
                                 <label for="password">Repete Senha</label>
-                                <input type="password" id="inputPass">
+                                <input type="password" id="inputPass" required>
                             </div>
                         </div>
 
@@ -117,7 +117,7 @@
 
                     <div class="inputWrapper">
                         <label for="address">Endereço</label>
-                        <input type="text" id="inputAddress">
+                        <input type="text" id="inputAddress" required>
                     </div>
 
                     
@@ -128,17 +128,17 @@
 
                                 <div class="inputWrapperData">
                                     <label for="district">Bairro</label>
-                                    <input type="number" id="inputDistrict">
+                                    <input type="text" id="inputDistrict" required>
                                 </div>
 
                                 <div class="inputWrapperData">
                                     <label for="cep">CEP</label>
-                                    <input type="number" id="inputCep">
+                                    <input type="number" id="inputCep" required>
                                 </div>
 
                                 <div class="inputWrapperData">
                                     <label for="state">Estado</label>
-                                    <input type="text" id="inputState">
+                                    <input type="text" id="inputState" required>
                                 </div>
 
                             </div>
@@ -147,19 +147,19 @@
 
                                 <div class="inputWrapperData">
                                     <label for="numberHouse">Número</label>
-                                    <input type="number" id="inputNumHouse">
+                                    <input type="number" id="inputNumHouse" required="required">
                                 </div>
         
         
                                 <div class="inputWrapperData">
                                     <label for="city">Cidade</label>
-                                    <input type="text" id="inputCity">
+                                    <input type="text" id="inputCity" required>
                                 </div>
         
         
                                 <div class="inputWrapperData">
                                     <label for="complement">Complemento</label>
-                                    <input type="text" id="inputComplement">
+                                    <input type="text" id="inputComplement" required>
                                 </div>
                             </div>
     
@@ -167,7 +167,10 @@
                     </div>
             </fieldset>
 
-            <input type="button" value="Salvar">
+            <div class="formButton">
+                
+                <button>Salvar</button>
+            </div>
         </form>
 
         <footer>
