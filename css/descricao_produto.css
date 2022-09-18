@@ -129,9 +129,6 @@
     line-height: 20px;
 }
 
-
-
-
 /*----------------------------*/
 
 .pricProduct {
@@ -252,6 +249,11 @@
 .addCart button {
     background-color: #63A344;
     margin-bottom: 1.8rem;
+}
+
+.addCart button a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .shippingPrice {
