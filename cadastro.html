@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="pageForm">
+    <div class="page">
 
         <header>
             <div class="logoHeader">
@@ -47,62 +47,52 @@
 
             <fieldset>
 
+                <div class="title">
+                    <h1>Cadastre-se</h1>
+                    <span>Assim conhecemos você um pouco melhor :)</span>
+
+                </div>
+
                 <div class="fieldsetWrapper">
 
-                    <div class="title">
-                        <h1>CADASTRO</h1>
-                    </div>
-
-                    <legend>dados pessoais</legend>
-
-                    <div class="inputWrapper">
-                        <label for="name">Nome Completo</label>
-                        <input type="text"  required id="inputName">
+                    <div class="inputWrapper" id="name">
+                        <p for="name">Nome Completo</p>
+                        <input type="text" required id="inputName" placeholder="Nome Completo">
                     </div>
 
                     <div class="inputsWrapper">
 
-                        <div class="inputsWrapperColun1">
 
-                            <div class="inputWrapperData">
-                                <label for="cpf">cpf</label>
-                                <input type="number" required min="11111111111" id="inputCpf">
-                            </div>
-
-                            <div class="inputWrapperData">
-                                <label for="dataNasc">Data Nascimento</label>
-                                <input type="date" id="inputDataNasc" required>
-                            </div>
-
-                            <div class="inputWrapperData">
-                                <label for="password">Senha</label>
-                                <input type="password" id="inputPass" required>
-                            </div>
-
+                        <div class="inputWrapperData">
+                            <p for="cpf">cpf</p>
+                            <input type="number" required min="11111111111" id="inputCpf" placeholder="CPF">
                         </div>
 
-                        <div class="inputsWrapperColun2">
-
-
-                            <div class="inputWrapperData">
-                                <label for="tel">Telefone</label>
-                                <input type="tel" required minlength="9" id="inputTel">
-                            </div>
-
-
-
-                            <div class="inputWrapperData">
-                                <label for="email">E-mail</label>
-                                <input type="email" id="inputEmail" required>
-                            </div>
-
-
-
-                            <div class="inputWrapperData">
-                                <label for="password">Repete Senha</label>
-                                <input type="password" id="inputPass" required>
-                            </div>
+                        <div class="inputWrapperData">
+                            <p for="dataNasc">Data Nascimento</p>
+                            <input type="date" id="inputDataNasc" required>
                         </div>
+
+                        <div class="inputWrapperData">
+                            <p for="password">Senha</p>
+                            <input type="password" id="inputPass" required placeholder="Senha">
+                        </div>
+
+                        <div class="inputWrapperData">
+                            <p for="password">Repete Senha</p>
+                            <input type="password" id="inputPass" required placeholder="Repete Senha">
+
+                        </div>
+                        <div class="inputWrapperData">
+                            <p for="tel">Telefone</p>
+                            <input type="tel" required minlength="9" id="inputTel" placeholder="Telefone">
+                        </div>
+
+                        <div class="inputWrapperData">
+                            <p for="email">E-mail</p>
+                            <input type="email" id="inputEmail" required placeholder="E-mail">
+                        </div>
+
 
                     </div>
                 </div>
@@ -113,63 +103,79 @@
 
                 <div class="fieldsetWrapper">
 
-                    <legend>endereço</legend>
+                    <legend>Onde vamos te encontrar?</legend>
 
                     <div class="inputWrapper">
-                        <label for="address">Endereço</label>
-                        <input type="text" id="inputAddress" required>
+                        <p for="address">Endereço</p>
+                        <input type="text" id="inputAddress" required placeholder="Rua, avenida">
                     </div>
 
 
 
                     <div class="inputsWrapper">
 
-                        <div class="inputsWrapperColun1">
+                        <div class="inputWrapperData">
+                            <p for="district">Bairro</p>
+                            <input type="text" id="inputDistrict" required placeholder="Bairro">
+                        </div>
 
-                            <div class="inputWrapperData">
-                                <label for="district">Bairro</label>
-                                <input type="text" id="inputDistrict" required>
+                        <div class="inputWrapperData">
+                            <p for="cep">CEP</p>
+                            <input type="number" id="inputCep" required>
+                        </div>
+
+                        <div class="inputWrapperData2">
+
+                            <div class="teste1">
+                                <div class="stateText">
+                                    <p for="estate">Estado </p>
+                                </div>
+    
+                                <select name="category" id="" placeholder="teste">
+                                    <option value="Music">Estado</option>
+                                    <option value="Music">Santa Catarina</option>
+                                    <option value="Music">Paraná</option>
+                                    <option value="Music">São Paulo</option>
+                                </select>
                             </div>
 
-                            <div class="inputWrapperData">
-                                <label for="cep">CEP</label>
-                                <input type="number" id="inputCep" required>
-                            </div>
+                            <div class="teste2">
 
-                            <div class="inputWrapperData">
-                                <label for="state">Estado</label>
-                                <input type="text" id="inputState" required>
+                                <div class="cityText">
+                                    <p for="city">Cidade</p>
+                                </div>
+    
+                                <select name="category" id="" placeholder="teste">
+                                    <option value="Music">Luzerna</option>
+                                    <option value="Music">Joaçaba</option>
+                                    <option value="Music">Tangará</option>
+                                    <option value="Music">Treze Tilias</option>
+                                </select>
                             </div>
+                        </div>
+
+
+                        <div class="inputWrapperData">
+                            <p for="numberHouse">Número</p>
+                            <input type="number" id="inputNumHouse" required="required">
+                        </div>
+
+
+                        <div class="inputWrapperData">
 
                         </div>
 
-                        <div class="inputsWrapperColun2">
 
-                            <div class="inputWrapperData">
-                                <label for="numberHouse">Número</label>
-                                <input type="number" id="inputNumHouse" required="required">
-                            </div>
-
-
-                            <div class="inputWrapperData">
-                                <label for="city">Cidade</label>
-                                <input type="text" id="inputCity" required>
-                            </div>
-
-
-                            <div class="inputWrapperData">
-                                <label for="complement">Complemento</label>
-                                <input type="text" id="inputComplement" required>
-                            </div>
+                        <div class="inputWrapperData">
+                            <p for="complement">Complemento</p>
+                            <input type="text" id="inputComplement" required placeholder="Casa, apto, porão">
                         </div>
 
-                    </div>
-                </div>
             </fieldset>
 
             <div class="formButton">
 
-                <button>Salvar</button>
+                <button class="btn">Salvar</button>
             </div>
         </form>
 
