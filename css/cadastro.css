@@ -33,7 +33,25 @@ fieldset h1 {
     padding: 2.1rem 0 .8rem;
 }
 
-.title span, .fieldsetWrapper legend{
+.title span {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    text-align: center;
+    padding: 2.1rem 0 .8rem;
+}
+
+.fieldsetWrapper legend{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    text-align: center;
+    padding: 2.1rem 0 .8rem;
+}
+
+.fieldsetWrapper legend{
     display: flex;
     justify-content: center;
     font-weight: 300;
@@ -50,18 +68,21 @@ fieldset h1 {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+    padding: 4rem;
 }
 
 .inputsWrapper {
     gap: 1rem;
     margin-bottom: 1rem;
+
 }
 
 .inputWrapper, .inputsWrapper, .inputWrapperData {
-    width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+   
 }
 
 .inputWrapper input, .inputWrapperData input {
@@ -74,7 +95,7 @@ fieldset h1 {
 
 .inputWrapperData2 {
     display: flex;
-    gap: 5rem;
+    gap: 11.5rem;
 }
 
 .stateText, .cityText {

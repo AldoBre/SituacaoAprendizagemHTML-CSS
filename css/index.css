@@ -144,7 +144,6 @@ main {
     width: auto;
     padding: 1rem;
     border-radius: 5rem;
-    background: rgba(175, 175, 175, 0.9);
     cursor: pointer;
 }
 
@@ -345,6 +344,7 @@ footer {
     text-align: center;
     opacity: 80%;
     line-height: 1.5rem;
+    text-transform: uppercase;
 }
 
 .footerImg img {
