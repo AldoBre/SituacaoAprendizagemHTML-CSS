@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="./css/registration.css">
     <title>Orange Shopping</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@
         </header>
 
 
-        <form action="cadastro_concluido.html">
+        <form>
 
             <fieldset>
 
@@ -55,44 +55,35 @@
 
                 <div class="fieldsetWrapper">
 
-                    <div class="inputWrapper" id="name">
-                        
-                        <input type="text" required id="inputName" placeholder="Nome Completo">
+                    <div class="inputWrapper" id="name">                        
+                        <input type="text"  id="inputName" placeholder="Nome Completo">
                     </div>
 
                     <div class="inputsWrapper">
 
-
-                        <div class="inputWrapperData">
-                            
-                            <input type="number" required min="11111111111" id="inputCpf" placeholder="CPF">
+                        <div class="inputWrapperData">           
+                            <input type="text" class="cpf"  min="11111111111" id="inputCpf" placeholder="CPF">
                         </div>
 
                         <div class="inputWrapperData">
                             <p for="dataNasc">Data Nascimento</p>
-                            <input type="date" id="inputDataNasc" required>
+                            <input type="date" id="inputDataNasc" >
                         </div>
 
                         <div class="inputWrapperData">
                             
-                            <input type="password" id="inputPass" required placeholder="Senha">
+                            <input type="text" id="inputUserName"  placeholder="UserName">
                         </div>
 
                         <div class="inputWrapperData">
                             
-                            <input type="password" id="inputPass" required placeholder="Repete Senha">
+                            <input type="password" id="inputPass"  placeholder="Senha">
 
                         </div>
                         <div class="inputWrapperData">
                             
-                            <input type="tel" required minlength="9" id="inputTel" placeholder="Telefone">
+                            <input type="text" class="phone_with_ddd"   id="inputTel" placeholder="Telefone">
                         </div>
-
-                        <div class="inputWrapperData">
-                           
-                            <input type="email" id="inputEmail" required placeholder="E-mail">
-                        </div>
-
 
                     </div>
                 </div>
@@ -105,65 +96,24 @@
 
                     <legend>Onde vamos te encontrar?</legend>
 
-                    <div class="inputWrapper">
-                        
-                        <input type="text" id="inputAddress" required placeholder="Endereço, Rua, avenida">
+                    <div class="inputWrapper">                        
+                        <input type="text" id="inputAddress"  placeholder="Endereço, Rua, avenida">
                     </div>
-
-
 
                     <div class="inputsWrapper">
 
-                        <div class="inputWrapperData">
-                          
-                            <input type="text" id="inputDistrict" required placeholder="Bairro">
+                        <div class="inputWrapperData">               
+                            <input type="text" id="inputDistrict"  placeholder="Bairro">
                         </div>
 
                         <div class="inputWrapperData">
-                          
-                            <input type="number" id="inputCep" required placeholder="CEP">
+                            <input type="number" id="inputNumHouse"  placeholder="Número">
                         </div>
-
-                        <div class="inputWrapperData2">
-
-                            <div class="teste1">
-                                
-    
-                                <select name="category" id="" placeholder="teste">
-                                    <option value="Music">Estado</option>
-                                    <option value="Music">Santa Catarina</option>
-                                    <option value="Music">Paraná</option>
-                                    <option value="Music">São Paulo</option>
-                                </select>
-                            </div>
-
-                            <div class="teste2">
-   
-                                <select name="category" id="" placeholder="teste">
-                                    <option value="Music">Cidade</option>
-                                    <option value="Music">Luzerna</option>
-                                    <option value="Music">Joaçaba</option>
-                                    <option value="Music">Tangará</option>
-                                    <option value="Music">Treze Tilias</option>
-                                </select>
-                            </div>
-                        </div>
-
-
-                        <div class="inputWrapperData">
-
-                            <input type="number" id="inputNumHouse" required="required" placeholder="Número">
-                        </div>
-
-                        <div class="inputWrapperData">
-                            <input type="text" id="inputComplement" required placeholder="Complemento">
-                        </div>
-
             </fieldset>
 
             <div class="formButton">
 
-                <button class="btn">Salvar</button>
+                <button id="saveUser" class="btn">Salvar</button>
             </div>
         </form>
 
@@ -202,6 +152,10 @@
 
 
     </div>
+    <script src="./js/registerUser.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="./js/validations.js"></script>
 </body>
 
 </html>

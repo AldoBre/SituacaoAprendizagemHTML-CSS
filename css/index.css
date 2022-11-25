@@ -374,3 +374,14 @@ footer {
     align-items: center;
     gap: 10px;
 }
+
+.links{
+    display: flex;
+    flex-direction: column;
+}
+
+span a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+}

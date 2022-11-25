@@ -6,12 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/itemRegister.css">
+    
     <title>Orange Shopping</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Roboto:wght@500;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Inter&family=Roboto:wght@500;900&display=swap"
         rel="stylesheet">
 
     <link rel="shortcut icon" href="./imgs/icon.png" type="image/x-icon">
@@ -35,55 +36,56 @@
                 <ul>
                     <li> <a href="login.html">Login</a></li>
                     <li>/</li>
-                    <li> <a href="registration.html">Cadastrar</a></li>
+                    <li> <a href="cadastro.html">Cadastrar</a></li>
                 </ul>
 
                 <img src="./imgs/fluent_cart-16-regular.png" alt="">
             </div>
         </header>
 
-        <div>
-
-            <div class="mainLogin">
-                <h2>LOGIN / CADASTRAR</h2>
-
-                <div class="inputs">
-
-                    <div class="inputUser">
-                        <span>E-mail</span>
-                        <input id="user" type="text" required placeholder="digite seu e-mail">
+        <div class="page2">
+            <main>
+                <div class="cabc">
+                    <div class="headers">
+                        <div class="headersProduct">
+    
+                            <div class="title">
+                                <h2>Produtos Cadastrados</h2>
+                            </div>
+                            <div class="buttonProduct">
+                                <button>adicionar Produtos</button>
+                            </div>
+                        </div>
+                        
                     </div>
-
-                    <div class="inputPassword">
-                        <span>Senha</span>
-                        <input id="password" type="password" required placeholder="digite sua senha">
-                    </div>
-
-                </div>
-                <div class="forgetPassword">
-
-                    <a href="#">Esqueceu a senha?</a>
                 </div>
 
-                <button id="btnLogin"><a href="index.html">Entrar</a></button>
-
-                <div class="cadastroRedesSociais">
-                    <p>Não possui conta?</p>
-
-                    <div class="RedesSociaisCadastro">
-                        <a href="cadastro.html">Cadastre-se</a>
-                        <p>ou entre com</p>
+                <div class="products">
+                   
+                    <div class="userList">
+                       <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>userName</th>
+                                    <th>Cpf</th>
+                                    <th>Aniversário</th>
+                                    <th>Telefone</th>
+                                    <th>Endereço</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                       </table>
+                       
                     </div>
-                    <div class="social">
-
-                        <a href=""><img src="./imgs/logos_facebook.png" alt=""></a>
-                        <a href=""><img src="./imgs/flat-color-icons_google.png" alt=""></a>
-                    </div>
-
+                        
                 </div>
-
-            </div>
+                
+                
+            </main>
         </div>
+        
 
         <footer>
             <div class="footerInfo">
@@ -116,7 +118,7 @@
             </div>
         </footer>
     </div>
-    <script src="./js/login.js"></script>
+    <script src="./js/itemsList.js"></script>
 </body>
 
 </html>

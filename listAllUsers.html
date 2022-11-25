@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/itemRegister.css">
+    
+    <title>Orange Shopping</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Inter&family=Roboto:wght@500;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="shortcut icon" href="./imgs/icon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="page">
+
+        <header>
+            <div class="logoHeader">
+                <a href="index.html"><img src="./imgs/logo4.png" alt=""></a>
+            </div>
+
+            <div class="searchHeader">
+                <input type="text" placeholder="Pesquise o que quiser">
+                <button><img src="./imgs/search.png" alt=""></button>
+            </div>
+
+            <div class="loginRegister">
+                <ul>
+                    <li> <a href="login.html">Login</a></li>
+                    <li>/</li>
+                    <li> <a href="registration.html">Cadastrar</a></li>
+                </ul>
+
+                <img src="./imgs/fluent_cart-16-regular.png" alt="">
+            </div>
+        </header>
+
+        <div class="page2">
+            <main>
+                <div class="cabc">
+                    <div class="headers">
+                        <div class="headersProduct">
+    
+                            <div class="title">
+                                <h2>Usuários Cadastrados</h2>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="userList">
+                       <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>userName</th>
+                                    <th>Cpf</th>
+                                    <th>Aniversário</th>
+                                    <th>Telefone</th>
+                                    <th>Endereço</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                       </table>
+                       
+                    </div>
+
+                    <div class="modal">
+                        <form id="user-edit">
+
+                            <fieldset>
+                
+                                <div class="title">
+                                    <h1>Edite Suas Informações</h1>
+                                </div>
+                
+                                <div class="fieldsetWrapper">
+                
+                                    <div class="inputWrapper hide" id="id">                        
+                                        <input type="text"  id="inputId" placeholder="Nome Completo">
+                                    </div>
+                                    <div class="inputWrapper" id="name">                        
+                                        <input type="text"  id="inputName" placeholder="Nome Completo">
+                                    </div>
+                
+                                    <div class="inputsWrapper">
+                
+                                        <div class="inputWrapperData">           
+                                            <input type="number"  min="11111111111" id="inputCpf" placeholder="CPF">
+                                        </div>
+                
+                                        <div class="inputWrapperData">
+                                            <p for="dataNasc">Data Nascimento</p>
+                                            <input type="date" id="inputDataNasc" >
+                                        </div>
+                
+                                        <div class="inputWrapperData">
+                                            
+                                            <input type="text" id="inputUserName"  placeholder="UserName">
+                                        </div>
+                
+                                        <div class="inputWrapperData">
+                                            
+                                            <input type="password" id="inputPass"  placeholder="Senha">
+                
+                                        </div>
+                                        <div class="inputWrapperData">
+                                            
+                                            <input type="tel"  minlength="9" id="inputTel" placeholder="Telefone">
+                                        </div>
+                
+                                    </div>
+                                </div>
+                
+                            </fieldset>
+                
+                            <fieldset>
+                
+                                <div class="fieldsetWrapper">
+                
+                                    <legend>Edite seu endereço</legend>
+                
+                                    <div class="inputWrapper">                        
+                                        <input type="text" id="inputAddress"  placeholder="Endereço, Rua, avenida">
+                                    </div>
+                
+                                    <div class="inputsWrapper">
+                
+                                        <div class="inputWrapperData">               
+                                            <input type="text" id="inputDistrict"  placeholder="Bairro">
+                                        </div>
+                
+                                        <div class="inputWrapperData">
+                                            <input type="number" id="inputNumHouse"  placeholder="Número">
+                                        </div>
+                            </fieldset>
+                
+                            <div class="formButton">
+                
+                                <button onclick="editUser()" class="btn">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+                
+                
+            </main>
+        </div>
+        
+
+        <footer>
+            <div class="footerInfo">
+                <p>
+                    CNPJ n.º 03.007.331/0001-41 <br> Av. das Nações Unidas, nº 3.003 <br> Bonfim, Osasco/SP - CEP
+                    06233-903
+                    <br> empresa do grupo Orange Shopping.
+                </p>
+            </div>
+
+            <div class="footerImg">
+                <img src="./imgs/logo4.png" alt="">
+            </div>
+
+            <div class="footerSocial">
+                <p>Siga-nos em nossas redes sociais</p>
+
+                <div class="footerSocialInsta">
+
+                    <img src="./imgs/akar-icons_instagram-fill.png" alt="">
+                    <span>Instagram</span>
+                </div>
+
+                <div class="footerSocialFace">
+
+                    <img src="./imgs/fa_facebook-square.png" alt="">
+                    <span>Facebook</span>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+    <script src="./js/listAllUsers.js"></script>
+</body>
+
+</html>
