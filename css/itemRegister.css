@@ -14,11 +14,12 @@
     display: flex;
     justify-content: center;
     font-family: roboto;
+    
 }
 
 main{
     width: 134.4rem;
-    height: 110.8rem;
+    height: 100%;
     background-color: #FFFFFF;
     display: flex;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -35,8 +36,7 @@ main{
 
 .headersProduct{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
 }
 
 .buttonProduct button{
@@ -44,22 +44,14 @@ main{
     text-transform: uppercase;
 }
 
-.modal{
-    display: none;
-}
-.cardItemSell{
-    width: 381px;
-    height: 545px;
-    background: #E0DFDE;
-    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    padding: 3.9rem;
+.buttonProduct{
+    right: 0;
+    top: 0;
+    position: absolute;
 }
 
-.imgItem{
-    width: 305.01px;
-    height: 261.68px;
-    border-radius: 8px;
+.modal{
+    display: none;
 }
 
 .descriptionitem{
@@ -74,14 +66,6 @@ main{
     font-size: 1.5rem; 
 }
 
-.descriptionitem input{
-    height: 2.5rem;
-    border-radius: .8rem;
-    border: none;
-    padding: 1rem;
-    text-align: center;
-}
-
 .descriptionitem input:focus{
     box-shadow: 0 0 0 0;
     border: 0 none;
@@ -89,9 +73,9 @@ main{
 }
 
 .title{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
+    position: relative;
+    flex: 1 0 auto;
+    text-align: center;
 }
 
 .priceItem{
@@ -99,44 +83,6 @@ main{
     gap: 3rem;
 }
 
-.price, .discountItem,.endePrice{
-    display: flex;
-    gap: .36rem;
-    margin-bottom: 1rem;
-}
-
-.price input{
-    width: 100%;
-}
-
-.discountItem input{
-    width: 100%;
-}
-
-.inventory{
-    display: flex;
-    gap: .36rem;
-}
-
-.balance{
-    display: flex;
-    gap: .36rem;
-    align-items: center;
-}
-
-.balance input{
-    width: 20%;
-}
-
-.balance legend{
-    display: flex;
-    align-items: flex-end;
-}
-
-.buttons{
-    display: flex;
-    gap: .8rem;
-}
 
 .products{
     display: flex;
@@ -145,7 +91,39 @@ main{
     position: relative; 
 }
 
+  td{
+    text-align: center;
+    width: 100%;
 
+    font-size: 1.2rem;
+  }
 
+  th{
+    height: 1rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+  }
 
+  table{
+    border-collapse: collapse;
+    border: .1rem solid #505251;
+    margin-bottom: 3rem;
+  }
 
+  #actionTable{
+    display: flex;
+    padding: .5rem;
+  }
+
+  #actionTable img{
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  #userIndex{
+    display: none;
+  }
