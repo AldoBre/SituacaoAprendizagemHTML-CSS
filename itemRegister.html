@@ -53,7 +53,7 @@
                                 <h2>Produtos Cadastrados</h2>
                             </div>
                             <div class="buttonProduct">
-                                <button>adicionar Produtos</button>
+                                <button id="addProduct">adicionar Produtos</button>
                             </div>
                         </div>
                         
@@ -66,27 +66,53 @@
                        <table>
                             <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>Nome</th>
-                                    <th>userName</th>
-                                    <th>Cpf</th>
-                                    <th>Aniversário</th>
-                                    <th>Telefone</th>
-                                    <th>Endereço</th>
+                                    <th>Valor</th>
                                     <th>Ações</th>
                                 </tr>
                             </thead>
                        </table>
                        
                     </div>
+                    <div class="modal">
+                        <form id="itemAdd">
+
+                            <fieldset>
+                
+                                <div class="title">
+                                    <h1>Edite Suas Informações</h1>
+                                </div>
+                
+                                <div class="fieldsetWrapper">
+                
+                                    <div class="inputWrapper hide" id="productsId">                        
+                                        <input type="text"  id="productId">
+                                    </div>
+
+                                    <div class="inputWrapper hide" id="nameProducts">                        
+                                        <input type="text"  id="nameProduct" placeholder="Nome do Produto">
+                                    </div>
+
+                                    <div class="inputWrapper" id="name">                        
+                                        <input type="text"  id="priceProduct" placeholder="Preço">
+                                    </div>
+                
+                                </div>
+                
+                            </fieldset>
+                
+                            <div class="formButton">                
+                                <button class="btn">Salvar</button>
+                            </div>
+
+                        </form>
+                    </div>
                         
                 </div>
-                
-                
+                               
             </main>
         </div>
         
-
         <footer>
             <div class="footerInfo">
                 <p>
@@ -118,7 +144,13 @@
             </div>
         </footer>
     </div>
-    <script src="./js/itemsList.js"></script>
-</body>
+    <script src="./js/registerItem.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 
+    <script src="./js/validations.js"></script>
+</body>
 </html>

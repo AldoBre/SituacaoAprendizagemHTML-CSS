@@ -2,5 +2,6 @@ $(document).ready(function(){
 
     $('.phone_with_ddd').mask('(00) 00000-0000');
     $('.cpf').mask('000.000.000-00', {reverse: true});
-
+    $('#priceProduct').mask( "R$ #.##0,00", {reverse: true})
+    
 });
