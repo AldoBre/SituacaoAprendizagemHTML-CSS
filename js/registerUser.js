@@ -71,7 +71,7 @@ saveUserButton.addEventListener("click", async (event) => {
         address,
     })
 
-    window.location.href = "home.html"
+    window.location.href = "login.html"
 
 })
 
