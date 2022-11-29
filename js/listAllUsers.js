@@ -85,6 +85,7 @@ async function editUser(){
     const token = localStorage.getItem("token")
     const id = document.querySelector("#inputId").value
     const name = document.querySelector("#inputName").value
+    const password = document.querySelector("#inputPass").value
     const username = document.querySelector("#inputUserName").value
     const cpf = document.querySelector("#inputCpf").value
     const birthDate = document.querySelector("#inputDataNasc").value
@@ -100,12 +101,18 @@ async function editUser(){
             name,
             username,
             cpf,
+            password,
             birthDate,
             phoneNumber,
         })
     })
 
+    console.log(id)
+    console.log(token)
+
     const resultJson = await result.json()
+
+    return resultJson
 }
 
 async function renderAllUsers(){
@@ -156,13 +163,9 @@ async function getUserDados () {
 
     const allUsersJson = await allusers.json()
 
-    console.log(allUsersJson)
-
-
-    const userLogin = document.querySelector("#userLogin").innerHTML = allUsersJson.data.name
+    document.querySelector("#userLogin").innerHTML = allUsersJson.data.name
    
-
 }
 
-getUserDados()    
+getUserDados()   
 renderAllUsers()

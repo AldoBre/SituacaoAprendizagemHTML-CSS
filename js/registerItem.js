@@ -33,8 +33,8 @@ async function createProduct(newProduct){
     console.log("Product Created: ", resultJson.data)
 }
 
-async function editProduct(productId){
-    const { id, ...productBody } = productId
+/* async function editProduct(productId){
+    const { id, ...productInfo } = productId
     console.log(productId)
 
     const token = localStorage.getItem("token")
@@ -44,13 +44,13 @@ async function editProduct(productId){
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,
         }),
-        body: JSON.stringify(productBody),
+        body: JSON.stringify(productId),
     })
 
     const resultJson = await result.json()
 
-    return resultJson
-}
+    console.log(resultJson) 
+} */
 
 async function getProduct(){
     const token = localStorage.getItem("token")
@@ -75,7 +75,7 @@ async function renderAllProducts(){
         (product,index) => `
         <tr id="productId-${product.id}">
             <td id="nameTable">${product.name}</td>
-            <td id="userNameTable">R$ ${parseFloat(product.price).toFixed(2)}</td>
+            <td id="userNameTable">R$ ${product.price}</td>
             <td id="actionTable">
                 <img onclick="deleteProduct(${product.id})" src="./imgs/trash.png" id="deleteUser" alt="">
                 <img onclick="getProductModal(${product.id})" src="./imgs/edit.png" alt="">
@@ -144,9 +144,6 @@ async function getProductModal(productId){
     const name = document.querySelector("#nameProduct")
     const price = document.querySelector("#priceProduct")
 
-    console.log()
-
-
     id.value = productJson.data.id
     name.value = productJson.data.name
     price.value = productJson.data.price
@@ -163,30 +160,39 @@ addProduct.addEventListener("click", async (e) =>{
     const price = document.querySelector("#priceProduct").value
     
     const productInfo = {
+        id,
         name,
         price,
       }
 
-      const product = id
-        ? {
-            ...productInfo,
-            id: id,
-          }
-        : productInfo
-    
-      if (product.id) {
+        console.log(productInfo)
+      if (!id) {
         
-        console.log(product.id)
-
-        await editProduct(product.id)
-
-      } else {
         await  createProduct({
             name,
             price,
         })
-      }
+      
 
+      } else {
+        console.log(id)
+        const token = localStorage.getItem("token")
+        const result = await fetch(`${endpointURL}/product/${id}`,{
+            method: "PUT",
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+            }),
+            body: JSON.stringify({
+                name,
+                price,             
+            })
+        })
+  
+        const resultJson = await result.json()
+    
+        console.log(resultJson)
+    }      
 })
 
 renderAllProducts()
