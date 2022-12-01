@@ -1,12 +1,12 @@
 const endpointURL = "http://localhost:3001"
 
 loginToken = localStorage.getItem("token")
-if(!loginToken){
+if (!loginToken) {
     location.href = "index.html"
 }
 
 const buttonAddProduct = document.querySelector("#addProduct")
-buttonAddProduct.addEventListener("click", () =>{
+buttonAddProduct.addEventListener("click", () => {
 
     const modal = document.querySelector(".modal")
 
@@ -14,10 +14,9 @@ buttonAddProduct.addEventListener("click", () =>{
         modal.classList.remove("modal")
     }
 
-
 })
 
-async function createProduct(newProduct){
+async function createProduct(newProduct) {
 
     const result = await fetch(`${endpointURL}/product`, {
         method: "POST",
@@ -33,29 +32,28 @@ async function createProduct(newProduct){
     console.log("Product Created: ", resultJson.data)
 }
 
-/* async function editProduct(productId){
-    const { id, ...productInfo } = productId
-    console.log(productId)
+async function editProduct(product){
+    const { id, ...productInfo } = product
 
     const token = localStorage.getItem("token")
-    const result = await fetch(`${endpointURL}/product/${productId}`,{
+    const result = await fetch(`${endpointURL}/product/${id}`,{
         method: "PUT",
         headers: new Headers({
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,
         }),
-        body: JSON.stringify(productId),
+        body: JSON.stringify(productInfo),
     })
 
     const resultJson = await result.json()
+    
+    return resultJson
+}
 
-    console.log(resultJson) 
-} */
-
-async function getProduct(){
+async function getProduct() {
     const token = localStorage.getItem("token")
 
-    const allusers = await fetch(`${endpointURL}/product`,{
+    const allusers = await fetch(`${endpointURL}/product`, {
         method: "GET",
         headers: new Headers({
             "content-type": "application/json",
@@ -68,11 +66,11 @@ async function getProduct(){
     return allUsersJson
 }
 
-async function renderAllProducts(){
+async function renderAllProducts() {
     const allProducts = await getProduct()
 
     const listItemsArray = allProducts.data.map(
-        (product,index) => `
+        (product) => `
         <tr id="productId-${product.id}">
             <td id="nameTable">${product.name}</td>
             <td id="userNameTable">R$ ${product.price}</td>
@@ -97,7 +95,7 @@ async function renderAllProducts(){
 
 }
 
-async function deleteProduct(productId){
+async function deleteProduct(productId) {
     const token = localStorage.getItem("token")
     const deleteUser = await fetch(`${endpointURL}/product/${productId}`, {
         method: "DELETE",
@@ -108,10 +106,10 @@ async function deleteProduct(productId){
     })
     const deleteResultJson = await deleteUser.json()
 
-    if(deleteResultJson.deleteProductCount < 1){
+    if (deleteResultJson.deleteProductCount < 1) {
         console.error("Nenhum produto foi deletado")
         return
-    }else{
+    } else {
         alert("Produto Deletado")
     }
     const productToBeDeleted = document.getElementById(`productId-${productId}`)
@@ -120,7 +118,7 @@ async function deleteProduct(productId){
     return deleteResultJson
 }
 
-async function getProductModal(productId){
+async function getProductModal(productId) {
     const token = localStorage.getItem("token")
 
     const modal = document.querySelector(".modal")
@@ -129,7 +127,7 @@ async function getProductModal(productId){
         modal.classList.remove("modal")
     }
 
-    const user = await fetch(`${endpointURL}/product/${productId}`,{
+    const user = await fetch(`${endpointURL}/product/${productId}`, {
         method: "GET",
         headers: new Headers({
             "content-type": "application/json",
@@ -138,7 +136,6 @@ async function getProductModal(productId){
     })
 
     const productJson = await user.json()
-    console.log(productJson)
 
     const id = document.querySelector("#productId")
     const name = document.querySelector("#nameProduct")
@@ -152,47 +149,23 @@ async function getProductModal(productId){
 
 const addProduct = document.querySelector(".btn")
 
-addProduct.addEventListener("click", async (e) =>{
+addProduct.addEventListener("click", async (e) => {
     e.preventDefault()
 
     const id = document.querySelector("#productId").value
     const name = document.querySelector("#nameProduct").value
     const price = document.querySelector("#priceProduct").value
-    
+
     const productInfo = {
-        id,
         name,
         price,
-      }
+    }
 
-        console.log(productInfo)
-      if (!id) {
-        
-        await  createProduct({
-            name,
-            price,
-        })
-      
-
-      } else {
-        console.log(id)
-        const token = localStorage.getItem("token")
-        const result = await fetch(`${endpointURL}/product/${id}`,{
-            method: "PUT",
-            headers: new Headers({
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${token}`,
-            }),
-            body: JSON.stringify({
-                name,
-                price,             
-            })
-        })
-  
-        const resultJson = await result.json()
-    
-        console.log(resultJson)
-    }      
+    if (id) {
+        await editProduct({ id, ...productInfo })
+    } else {
+        await createProduct(productInfo)
+    }
 })
 
 renderAllProducts()

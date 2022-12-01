@@ -20,7 +20,6 @@ async function login(username, password) {
     }
 
     localStorage.setItem("token", resultJson.token)
-    console.log("token", resultJson.token)
 }
 
 async function createUser(newUser) {
@@ -37,7 +36,6 @@ async function createUser(newUser) {
 
     const resultJson = await result.json()
 
-    console.log("user created: ", resultJson)
 }
 
 const saveUserButton = document.querySelector("#saveUser")
@@ -58,8 +56,6 @@ saveUserButton.addEventListener("click", async (event) => {
     const birthDate = document.querySelector("#inputDataNasc").value
     const phoneNumber = document.querySelector("#inputTel").value
     const address = `${addres.address}, ${addres.district}, ${addres.numberHouse}`
-
-    console.log(name)
 
     await createUser({
         name,

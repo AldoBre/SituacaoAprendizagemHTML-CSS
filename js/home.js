@@ -5,8 +5,6 @@ if(!loginToken){
     location.href = "index.html"
 }
 
-
-
 async function getUser () {
     const token = localStorage.getItem("token")
 
@@ -20,13 +18,10 @@ async function getUser () {
 
     const allUsersJson = await allusers.json()
 
-    console.log(localStorage)
-
     return allUsersJson
 
 }
 getUser ()
-
 
 async function getUserDados () {
     const token = localStorage.getItem("token")
@@ -44,9 +39,7 @@ async function getUserDados () {
 
     console.log(allUsersJson)
 
-
     const userLogin = document.querySelector("#userLogin").innerHTML = allUsersJson.data.name
    
-
 }
 getUserDados ()

@@ -21,9 +21,7 @@ btnLogin.addEventListener("click", async (event) =>{
     })
 
     const resultJson = await result.json()
-
-    console.log(resultJson)
-    
+  
     if(!resultJson.token){
         const username = document.querySelector("#user").value = ""
         const password = document.querySelector("#password").value = ""
@@ -33,7 +31,6 @@ btnLogin.addEventListener("click", async (event) =>{
         localStorage.setItem("token", resultJson.token)
         localStorage.setItem("id", resultJson.data.id)
         window.location.href = "home.html"
-        console.log("Dados corretos")  
     }
  
   
