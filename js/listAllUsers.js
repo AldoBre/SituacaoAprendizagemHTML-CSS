@@ -79,8 +79,6 @@ async function getUserModal(userId){
 
 }
 
-
-
 async function editUser(){
     const token = localStorage.getItem("token")
     const id = document.querySelector("#inputId").value
@@ -106,9 +104,6 @@ async function editUser(){
             phoneNumber,
         })
     })
-
-    console.log(id)
-    console.log(token)
 
     const resultJson = await result.json()
 
